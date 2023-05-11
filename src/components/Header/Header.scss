@@ -1,0 +1,10 @@
+@import '../../resources/media-queries.scss';
+
+.header{
+    @include tablet{
+
+    }
+    @include desktop{
+        
+    }
+}

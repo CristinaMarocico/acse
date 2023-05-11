@@ -1,0 +1,286 @@
+@import '../../resources/media-queries.scss';
+
+.homepage{
+    &__top-wrapper{
+        position: relative;
+    }
+    &__top{
+        position: absolute;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        top:0;
+        z-index:10;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding:3px 0;
+    }
+    &__call{
+        display: flex;
+        flex-direction: row;
+        padding:3px 10px 0;
+        img{
+            width:18px;
+            object-fit: contain;
+            position:relative;
+            bottom:3px;
+        }
+    }
+    &__phone{
+       
+    }
+    &__social-top{
+        margin-right: 50px;
+        img{
+            width:18px;
+            margin:3px 10px 0;
+        }
+    }
+    &__close{
+        width:16px;
+        height:16px;
+        margin-top: 3px;
+        position:absolute;
+        top:3px;
+        right:5px;
+        z-index: 15;
+    }
+    &__contact{
+        width:22px;
+        height:22px;
+        margin-top: 3px;
+        position:absolute;
+        top:3px;
+        right:5px;
+        z-index: 15;
+    }
+    &__player-wrapper{
+        position: relative;
+        height:500px;
+    }
+    &__react-player{
+        height:500px;
+        object-fit: cover;
+        video{
+            object-fit: cover;
+        }
+    }
+    &__banner-box{
+        height:auto;
+        position:absolute;
+        top:17%;
+        left :15%;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        border-radius: 5px;
+        padding:40px 20px;
+        z-index:4;
+        h2{
+            opacity:1;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: lighter;
+
+        }
+    }
+    &__logo{
+        width:280px;
+        position:absolute;
+        z-index: 5;
+        margin:50px 0 0 40px;
+    }
+    &__more{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin:30px auto 0;
+        border:none;
+        color:white;
+        background-color: rgba(0,0,0,.5);
+        padding:10px;
+        border-radius: 5px;
+    }
+    &__about-us-section-background{
+        background-image: url('../assets/horse-6.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding:70px 20px;
+        position: relative;
+        height:460px;
+    }
+    &__form-background{
+        background-image: url('../assets/horse-8.jpg');
+    }
+    &__white-subtitle{
+        color:white;
+    }
+    &__subsection{
+        position: absolute;
+        background-color: rgba(0,0,0,.5);
+        color: #fff;
+        top:50px;
+        padding:20px 10px;
+        z-index:10;
+        border-radius: 5px;
+        width:85%;
+    }
+    &__about-us-section{
+        padding:40px 20px ;
+        background-color: #FFEFD5;
+    
+    }
+    &__subtitle{
+        padding-bottom: 5px;
+        text-align: center;
+        font-size: 22px;
+    }
+    &__line{
+        height:2px;
+        width:40px;
+        border-radius:5px;
+        margin:0 auto 15px;
+        display: flex;
+        background-color: #D2B48C;
+    }
+    &__description{
+        text-indent: 5px;
+        font-weight: bold;
+        line-height: 1.5;
+    }
+    &__camps-info-section{
+        background-color: white;
+    }
+    &__camp{
+
+    }
+    &__camp-box{
+        display: flex;
+        flex-direction: row;
+    }
+    &__camp-images{
+        position: relative;
+        margin:20px 0;
+    }
+    &__horse-img{
+        width:100px;
+        height:100px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__horse-img-2{
+        position: absolute;
+        top:55%;
+        left:25%;
+    }
+    &__horse-img-3{
+        top:125%;
+        left:0;
+        position:absolute
+    }
+    &__camp-name{
+        width:40%;
+        text-align: center;
+        display: flex;
+        font-size: 25px;
+        margin:40px auto!important;
+    }
+    &__camp-text{
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    &__benefit{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 14px;
+        img{
+            width:20px;
+        }
+    }
+    &__date-box{
+        display: flex;
+        flex-direction: row;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        justify-content: center;
+        padding:15px;
+        width:auto;
+        border-radius: 3px;
+    }
+    &__calendar{
+        width:30px;
+        margin-right: 3px;
+    }
+    &__or{
+        text-align:center;
+        padding:10px 0;
+    }
+    &__form{
+        background-color: white;
+        padding:20px 20px 40px;
+        border-radius: 5px;
+    }
+    &__label{
+        font-size: 14px;
+        padding:20px 0 5px;
+    }
+    &__field{
+        background-color: white;
+        color:black;
+        border:none;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border-radius: 5px;
+        height:44px;
+        width:100%;
+    }
+    &__footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: #fff4e6;
+        align-content: center;
+        padding:40px 20px;
+       
+    }
+    &__footer-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin:5px auto;
+        img{
+            width:18px;
+            object-fit: contain;
+            height:18px;
+            position: relative;
+            top:3px;
+            margin-right: 3px;        }
+        h5{
+            padding:5px 0;
+            text-align: center;
+            font-weight: bolder;
+        }
+    }
+    &__footer-logo{
+        width:200px;
+        height:auto;
+        object-fit: contain;
+        margin:0 auto 20px;
+    }
+    &__social{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        
+        justify-content: center;
+        img{
+            width:25px;
+            margin:20px 5px;
+        }
+    }
+
+    @include tablet{
+
+    }
+    @include desktop{
+        
+    }
+}

@@ -1,0 +1,37 @@
+@import './media-queries.scss';
+.standard{
+    h1, h2, h3{
+        font-family: 'Noto Serif', serif;
+    }
+    h4, h5, p, li{
+        font-family: 'Montserrat', sans-serif;
+    }
+    h1, h2, h3, h4, h5, p, li{
+        margin:0;
+    }
+    button{
+        cursor: pointer;
+    }
+    &__link{
+        text-decoration: none;
+        color:initial;
+        cursor: pointer;
+    }
+
+  
+
+    @include tablet{
+      
+    }
+    @include desktop{
+        &__only-mobile{
+            display: none;
+        }
+        &__only-desktop{
+            display: block;
+        }
+       
+    }
+}
+
+
