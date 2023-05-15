@@ -73,10 +73,13 @@
     &__banner-box{
         height:auto;
         position:absolute;
-        top:17%;
-        left :15%;
+        top:18%;
         background-color: rgba(0,0,0,.5);
         color: #fff;
+        left:0;
+        right:0;
+        margin:0 auto;
+        width:80%;
         border-radius: 5px;
         padding:40px 20px;
         z-index:4;
@@ -111,7 +114,6 @@
         background-size: cover;
         padding:70px 20px;
         position: relative;
-        height:900px;
     }
     &__form-background{
         background-image: url('../assets/horse-8.jpg');
@@ -127,14 +129,13 @@
 
     }
     &__subsection{
-        position: absolute;
         background-color: rgba(0,0,0,.5);
         color: #fff;
         top:50px;
         padding:20px 10px;
         z-index:10;
         border-radius: 5px;
-        width:85%;
+        width:95%;
     }
     &__about-us-section{
         padding:40px 20px ;
