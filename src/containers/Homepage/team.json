@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "name":"Radu Ilioi",
+        "img":"/images/radu.jpg",
+        "description":"Maestru al sportului , antrenor IGEQ level 3 , arbitru național "
+    },
+    {
+        "id":2,
+        "name":"Raul Ilioi",
+        "img":"/images/raul.jpg",
+        "description":"Antrenor IGEQ level 1"
+    },
+    {
+        "id":3,
+        "name":"Crăciun Cristina",
+        "img":"/images/cristina.jpg",
+        "description":"Antrenor IGEQ level 1"
+    },
+    {
+        "id":4,
+        "name":"Rareș Ilioi",
+        "img":"/images/rares.jpg",
+        "description":"Director department de comunicare și relații publice"
+    },
+    {
+        "id":5,
+        "name":"Mia",
+        "img":"/images/mia.jpg",
+        "description":"Studentul nostru permanent"
+    }
+]

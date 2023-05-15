@@ -1,9 +1,12 @@
 import React from 'react';
 import '../Homepage/Homepage.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import '../../resources/main.scss';
 import Header from "../../components/Header/Header";
 import ReactPlayer from 'react-player'
+import { Link, animateScroll as scroll } from "react-scroll";
+import Slider from "react-slick";
+import teamJson from './team.json'
 
 class Homepage extends React.Component {
     constructor(props) {
@@ -17,7 +20,8 @@ class Homepage extends React.Component {
                 period: ''
 
             },
-            topVisible: true
+            topVisible: true,
+            team:teamJson
         }
     }
     toggleVideo = () => {
@@ -38,6 +42,20 @@ class Homepage extends React.Component {
         this.setState({ contactInfo })
     }
     render() {
+        var settings = {
+            infinite: false,
+            speed: 500,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            swipeable: true,
+            centerMode: true,
+            dots: true,
+            adaptiveHeight: true,
+            centerMode: true,
+            centerPadding: '0',
+            swipe: true,
+        };
+
         return (
             <div className='standard homepage'>
                 <div className='homepage__top-wrapper'>
@@ -79,21 +97,51 @@ class Homepage extends React.Component {
 
                         <h2> ACSE ALBA IULIA</h2>
                         <h2> Club Sportiv Ecvestru </h2>
-                        <button className='homepage__more'>Află mai multe</button>
+                       <Link to="info" duration={800} smooth={true} className='standard__link'><button className='homepage__more'>Află mai multe</button></Link> 
 
+                    </div>
+
+                    <div className='homepage__sub-section'>
+                        <img src='/images/speed.png' alt='horse' className='homepage__speed-icon'/>
+                        <h3>Pășește cu eleganță în lumea echitației!</h3>
                     </div>
                     <div className='homepage__about-us-section homepage__about-us-section-background'>
                         <div className='homepage__subsection'>
                         <h3 className='homepage__subtitle'>Despre noi</h3>
                         <div className='homepage__line' />
-                        <p className='homepage__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p className='homepage__description'>Asociaţia Club Sportiv Ecvestru Alba Iulia a luat fiinţă în anul 2021, din iniţiativa unor oameni pasionaţi de sportul ecvestru, dornici să dezvolte aceast sport nobil în zona de centru a ţării.</p>
+                        <p className='homepage__description'>Scopul Clubului îl constituie desfășurărea de activităţi sportive ecvestre, respectiv selecționarea, iniţierea și pregătirea de sportivi în acest domeniu, participarea la competiţii sportive interne și internaţionale, precum și alte activităţi conexe acestora.</p>
+                        <p className='homepage__description'>Activitatea se desfășoară într-o bază hipică primitoare, care dispune de toate facilităţile impuse de Federaţia Ecvestră Română, precum manej interior, două terenuri de antrenament, unul de nisip și celălalt de iarbă, pentru a diversifica suprafața de antrenament.</p>
+                        <p className='homepage__description'>O importanţă deosebită este acordată relaxării cailor. Astfel, baza hipică dispune de padocuri în aer liber. </p>
+                        <p className='homepage__description'>Pentru transportul cailor, Clubul dispune de mijloace profesioniste, precum o autovană și două anhengere.</p>
+                        <p className='homepage__description'>Activitatea se desfășoară sub atenta coordonare a trei antrenori abilitaţi de International Group for Equestrian Qualification , forul internațional sub tutela căruia își desfășoară activitatea antrenorii in disciplinele ecvestre.</p>
                         </div>
                         
                     </div>
+                    <div className='homepage__offer'>
+                    <div  className='homepage__team-section'>
+                    <h3 className='homepage__subtitle'>Echipa noastră</h3>
+                        <div className='homepage__line' />
+                        <div className='homepage__slider' >
+                        <Slider  {...settings} className='homepage__real-slider'>
+                            {this.state.team.map(teammate => (
+                                <div key={teammate.id} className='homepage__singular-slider'>
+                                      <img src={teammate.img} className='homepage__slider-img' alt={teammate.name} />
+                                    <div className='homepage__slider-info-section'>
+                                        <h3 className='homepage__slider-title'>{teammate.name}</h3>
+                                        <p className='homepage__top-info'>{teammate.description}</p>
+                                    </div>
+                                  
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
+                    </div>
 
-                    <div className='homepage__about-us-section homepage__camps-info-section'>
+                    <div className='homepage__about-us-section homepage__camps-info-section'  id="info">
                         <h3 className='homepage__subtitle'>Ce oferim</h3>
                         <div className='homepage__line' />
+                        <h4>Organizam în această vară o serie de tabere pentru iniţierea copiilor în sportul ecvestru care includ:</h4>
                         <div className='homepage__camp'>
                             <div className='homepage__camp-box'>
                                 <div className='homepage__camp-images'>
@@ -103,35 +151,35 @@ class Homepage extends React.Component {
                                 <div className='homepage__camp-text'>
                                     <div className='homepage__benefit'>
                                         <img src='/images/check.png' alt='benefit' />
-                                        <h4>Exemplu de beneficiu</h4>
+                                        <h4>Cunoașterea cailor</h4>
                                     </div>
                                     <div className='homepage__benefit'>
                                         <img src='/images/check.png' alt='benefit' />
-                                        <h4>Exemplu de beneficiu</h4>
+                                        <h4>Lecții zilnice de echitație</h4>
                                     </div>
                                     <div className='homepage__benefit'>
                                         <img src='/images/check.png' alt='benefit' />
-                                        <h4>Exemplu de beneficiu</h4>
+                                        <h4>Jocuri interactive</h4>
                                     </div>
                                     <div className='homepage__benefit'>
                                         <img src='/images/check.png' alt='benefit' />
-                                        <h4>Exemplu de beneficiu</h4>
+                                        <h4>Cazare la pensiune de 3 stele</h4>
                                     </div>
                                     <div className='homepage__benefit'>
                                         <img src='/images/check.png' alt='benefit' />
-                                        <h4>Exemplu de beneficiu</h4>
+                                        <h4>Mese incluse</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className='homepage__about-us-section homepage__camps-info-section'>
+                    <div className='homepage__about-us-section homepage__camps-info-section homepage__when-section'>
                         <h3 className='homepage__subtitle'>Când?</h3>
                         <div className='homepage__line' />
                         <div className='homepage__date-box'>
                             <img src='/images/calendar.png' alt='calendar' className='homepage__calendar' />
-                            <h3>3-8 iulie 2023</h3>
+                            <h3>4-8 iulie 2023</h3>
                         </div>
                         <h4 className='homepage__or'>sau</h4>
                         <div className='homepage__date-box'>
@@ -139,9 +187,11 @@ class Homepage extends React.Component {
                             <h3>10-14 iulie 2023</h3>
                         </div>
                     </div>
+                    </div>
+                    
 
                     <div className='homepage__about-us-section homepage__about-us-section-background homepage__form-background'>
-                        <h3 className='homepage__subtitle homepage__white-subtitle'>Contactează-ne!</h3>
+                        <h3 className='homepage__subtitle homepage__white-subtitle'>Înscrie-te!</h3>
                         <div className='homepage__line' />
                         <form className='homepage__form'>
                             <div className='homepage__input-box homepage__small-field'>
@@ -194,6 +244,7 @@ class Homepage extends React.Component {
                                     <option value="10-14 iulie">10-14 iulie</option>
                                 </select>
                             </div>
+                            <button className='homepage__submit' type='submit'>Trimite mesajul</button>
                         </form>
                     </div>
 
