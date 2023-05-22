@@ -324,7 +324,7 @@ class Homepage extends React.Component {
                         </a>
                         <div className='homepage__footer-box'>
                             <img src="/images/email.png" alt='phone' />
-                            <h5>contact@acsealbaiulia.ro</h5>
+                            <h5>contact@acse-albaiulia.ro</h5>
                         </div>
                         <div className='homepage__footer-box'>
                             <img src="/images/location.png" alt='phone' />
