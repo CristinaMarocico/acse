@@ -194,7 +194,7 @@ class Homepage extends React.Component {
                         <div className='homepage__about-us-section homepage__offer-section' id="info">
                             <h3 className='homepage__subtitle'>Ce oferim</h3>
                             <div className='homepage__line' />
-                            <h4>Oferim lecții de echitație pe bază telefonică.</h4>
+                            <h4>Oferim lecții de echitație pe bază de programare telefonică.</h4>
                             <div className='homepage__lessons'>
                                 <img src='/images/lectie-1.jpg' alt='echitatie' className='homepage__lesson-img' />
                                 <img src='/images/lectie-2.jpg' alt='echitatie' className='homepage__lesson-img homepage__lesson-img-2' />
@@ -324,7 +324,7 @@ class Homepage extends React.Component {
                         </a>
                         <div className='homepage__footer-box'>
                             <img src="/images/email.png" alt='phone' />
-                            <h5>email@emailescu.router</h5>
+                            <h5>contact@acsealbaiulia.ro</h5>
                         </div>
                         <div className='homepage__footer-box'>
                             <img src="/images/location.png" alt='phone' />
