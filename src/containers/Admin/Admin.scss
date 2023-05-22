@@ -1,0 +1,128 @@
+@import '../../resources/media-queries.scss';
+.admin{
+    padding:40px 20px;
+    min-height: 100vh;
+    background-color:  #f8f3ed;
+    &__table-wrapper{
+      justify-content: wrap;
+      overflow-x: scroll;
+      position: relative;
+    }
+    &__table{
+        margin:40px 0 0;
+        background-color: white;
+        border-radius: 5px;
+        padding-bottom: 20px;
+      width:180%;
+    }
+    &__title{
+        padding-bottom: 3px;
+        font-size: 24px;
+    }
+    &__line{
+        background-color: #d2b48c;
+        height:2px;
+        width:100px;
+    }
+    &__head{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 3px;
+                box-shadow: 2px 14px 14px -10px rgba(0,0,0,0.14);
+
+        padding:12px 0 5px;
+        font-size: 14px;
+        height:35px;
+
+    }
+    &__head-title{
+        width:25%;
+        font-weight: bolder;
+        text-align: center;
+        border-right: 1px solid  #eadbc8;
+    }
+    &__row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:20px 0;
+    }
+    &__cell{
+        width:25%;
+        text-align: center;
+        border-right: 1px solid  #eadbc8;
+    }
+    &__no-clients{
+        padding-top:40px;
+    }
+    .pagination {
+        list-style-type: none;
+        display: flex;
+
+        align-items: center;
+        margin: 10px 0;;
+        padding-bottom: 20px;
+
+        li {
+          cursor: pointer;
+          color: #e66300;
+          background-color: #fff;
+          border-radius: 5px;
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+          border:none;
+          padding: 5px 0;
+          margin: 0 5px;
+          font-weight: bolder;
+
+          a {
+            padding: 5px 10px;
+            color:#e66300;
+          }
+
+          a:focus {
+            outline: none;
+          }
+
+          &:hover {
+            background-color: #e6e6e6;
+            color: #e66300;
+
+            a {
+              color:#e66300;;
+            }
+          }
+        }
+
+        .active {
+          border:1px solid #e66300;;
+          color: #e66300;;
+
+          a {
+            color: #e66300;
+          }
+        }
+
+        .previous, .next {
+          border: 1px solid grey;
+
+        }
+      }
+    @include tablet{
+
+    }
+    @include desktop{
+      padding:100px 10%;
+      &__line{
+        width:200px;
+      }
+      &__table-wrapper{
+        justify-content: wrap;
+        overflow-x: initial;
+        position: relative;
+      }
+        &__table{
+          width:70%;
+        }
+    }
+}

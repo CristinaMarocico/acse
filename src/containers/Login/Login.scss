@@ -1,0 +1,124 @@
+@import '../../resources/media-queries.scss';
+
+.login{
+    position: relative;
+    background:#E2725B;
+    min-height: 100vh;
+    
+    &__logo{
+        height:40px;
+        width:130px;
+        position: relative;
+        top:0;
+        margin:0 auto;
+        display: flex;
+        padding-bottom: 20px;
+    }
+    &__container{
+        margin:0 40px;
+        background: #FFFFFF;
+        box-shadow: 0px 15px 30px rgba(235, 231, 247, 0.3);
+        border-radius: 7px;
+        width:70%;
+        position: absolute;
+        top:150px;
+        font-weight: lighter;
+        padding:20px 20px;
+        height:350px;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+             transition: background-color 5000s ease-in-out 0s;
+           
+ }
+    }
+    &__subtitle{
+        font-size: 24px;
+        line-height: 28px;
+        color: #48525D;
+        text-align: center;
+        font-weight: lighter;
+    }
+    &__label{
+        font-size: 14px;
+        line-height: 16px;
+        color: #48525D;
+        font-weight: bold;
+        padding:20px 0 5px;
+    }
+    &__input{
+        background: #FFFFFF;
+        border-radius: 7px;
+        border: 1px solid #E6E8EB;
+        height:36px;
+    }
+    &__submit-button{
+        width: 120px;
+        height: 38px;
+        background: #E2725B;
+        border-radius: 7px;
+        border:none;
+        margin-top: 20px;
+    }
+    &__button-writing{
+        color: #F6F7FA;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    &__colored{
+        color:#E2725B;
+    }
+    @include tablet{
+        &__house-img{
+            object-fit: cover;
+        }
+        &__container{
+            width:78%;
+            padding:40px;
+        }
+        &__form{
+            width:80%;
+            margin:0 auto;
+        }
+        &__label{
+            font-size: 16px;
+        }
+    }
+    @include desktop{
+        &__logo{
+            padding-bottom: 40px;
+        }
+        &__container{
+            width:50%;
+            position: relative;
+            top:100px;
+            margin:0 auto;
+            padding-bottom: 240px;
+            box-shadow: initial;
+        }
+        &__subtitle{
+            text-align: left;
+            padding-left: 25%;
+        }
+        &__input{
+            border-radius: 15px;
+            height:60px;
+        }
+        &__form{
+            margin:20px 25% 0;
+        }
+        &__label{
+            font-size: 18px;
+        }
+        &__password-question{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

@@ -8,6 +8,18 @@
     &__top-wrapper{
         position: relative;
     }
+    &__top-wrapper{
+        h5{
+            color:#fff;
+        }
+       
+    }
+    &__see-more-description{
+        text-align: center;
+        font-weight: bold;
+        padding-top: 10px;
+        font-size: 14px;
+    }
     &__top{
         position: absolute;
         background-color: rgba(0,0,0,.5);
@@ -31,11 +43,14 @@
             bottom:3px;
         }
     }
+    &__team-desktop{
+        display: none;
+    }
     &__phone{
        
     }
     &__social-top{
-        margin-right: 50px;
+        margin-right: 30px;
         img{
             width:18px;
             margin:3px 10px 0;
@@ -47,7 +62,7 @@
         margin-top: 3px;
         position:absolute;
         top:3px;
-        right:5px;
+        right:10px;
         z-index: 15;
     }
     &__contact{
@@ -112,7 +127,7 @@
         background-image: url('../assets/horse-6.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        padding:70px 20px;
+        padding:70px 20px!important;
         position: relative;
     }
     &__form-background{
@@ -138,7 +153,7 @@
         width:95%;
     }
     &__about-us-section{
-        padding:40px 20px ;
+        padding:40px 20px 0 ;
     
     }
     &__subtitle{
@@ -325,7 +340,10 @@
         padding:40px 20px;
     }
     &__when-section{
-        padding-top: 0;
+        padding-bottom:50px;
+    }
+    .slick-track{
+
     }
     &__singular-slider{
        
@@ -357,11 +375,192 @@
             padding:5px 0;
         }
     }
-
+    &__lessons{
+        position:relative;
+        margin:20px 0 10px;
+    }
+    &__lessons-wrapper{
+        position: relative;
+        height:600px;
+        margin-bottom: 20px;
+    }
+    &__lesson-img{
+        width:300px;
+        border-radius: 10px;
+        height:300px;
+        object-fit: cover;
+        object-position: top;
+    }
+    &__lesson-img-2{
+        margin:-40px 0 20px 70px;
+    }
+    &__call-us{
+        background-color: #E2725B;
+        margin:10px auto;
+    }
+    &__price{
+        background-color: #E2725B;
+        padding:8px 0;
+        border-radius: 15px;
+        width:150px;
+        margin-left: 20px;
+        h4{
+            color:white;
+            text-align: center;
+        }
+    }
+    &__more-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width:20px;
+        }
+        p{
+            padding-top: 0;
+        }
+    }
     @include tablet{
-
+        &__lesson-img-2{
+            margin:initial;
+        }
+        &__lesson-img{
+            width:45%;
+        }
+        &__lessons{
+            display: flex;
+            justify-content: space-between;
+        }
+        &__call-us{
+            margin-top: 40px;
+        }
+        &__camp-images{
+            margin-right: 50px;
+        }
+        &__horse-img{
+            width:150px;
+            height:150px;
+        }
+        &__benefit{
+            h4{
+                font-size: 20px;
+            }
+        }
     }
     @include desktop{
-        
+        &__price{  
+            margin-left: 0;
+            padding:15px 0;
+        }
+        &__logo{
+            width:350px;
+            top: 60px;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+        }
+        &__banner-box{
+            width:40%;
+            height:170px;
+            padding-top: 60px;
+            h2{
+                font-size: 32px;
+            }
+        }
+        &__player-wrapper{
+            height:700px;
+        }
+        &__sub-section{
+            padding-bottom: 50px;
+        }
+        &__subsection{
+            width:50%;
+            margin:0 auto;
+            padding:40px;
+        }
+        &__description{
+            font-size: 18px;
+        }
+        &__subtitle{
+            font-size: 24px;
+        }
+        &__team-desktop{
+            display: flex!important;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding:40px 14%;
+
+        }
+        &__singular-slider{
+            width:30%;
+        }
+        &__slider-img{
+            height:300px;
+            width:100%;
+            border-radius: 10px;
+        }
+        &__offer-section{
+            padding:40px 14%;
+           h4{
+            text-align: center;
+            padding-bottom: 40px;
+           }
+        }
+        &__lessons{
+            display: flex;
+            justify-content: space-between;
+            width:60%;
+            margin:0 auto 20px;
+        }
+        &__lesson-img{
+        width:400px;
+        height:400px;
+        }
+        &__lesson-img-2{
+            margin:initial;
+        }
+        &__camps-info-section{
+
+        }
+        &__camps-description{
+            text-align: center;
+            font-size: 20px;
+        }
+        &__camp-box{
+            width:50%;
+            display: flex;
+            justify-content: center;
+            margin:20px auto 100px;
+        }
+        &__camp-images{
+            position:relative;
+            right:100px;
+            img{
+                width:240px;
+                height:240px;
+            }
+        }
+        &__benefit{
+            img{
+                width:40px;
+            }
+            h4{
+                font-size: 18px;
+                position: relative;
+                top:10px;
+            }
+        }
+        &__date-box{
+            width:30%;
+            margin:10px auto;
+        }
+        &__form{
+            width:40%;
+            margin:40px auto;
+            padding:40px;
+        }
     }
+    
 }
