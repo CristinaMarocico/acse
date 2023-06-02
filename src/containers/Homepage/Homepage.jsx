@@ -199,6 +199,11 @@ class Homepage extends React.Component {
                                 <img src='/images/lectie-1.jpg' alt='echitatie' className='homepage__lesson-img' />
                                 <img src='/images/lectie-2.jpg' alt='echitatie' className='homepage__lesson-img homepage__lesson-img-2' />
                             </div>
+                            <div className='homepage__prices-box'>
+                                <h3>Plimbare de acomodare pentru copii 15 minute - 50 RON</h3>
+                                  <h3>Lecție începători 30 minute - 100 RON</h3>
+                                    <h3>Lecție avansați 40 minute - 150 RON</h3>
+                            </div>
                             <a href={`tel:+40740491335`} className='standard__link'>   <button className='homepage__more homepage__call-us'>Sună-ne</button> </a>
 
                         </div>
